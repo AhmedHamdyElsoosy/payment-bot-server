@@ -5,6 +5,12 @@ const fs = require('fs-extra');
 const PDFDocument = require('pdfkit');
 const path = require('path');
 require('dotenv').config();
+const corsOptions = {
+  origin: '*', // لو عايز تقيّده دومين معين حط: 'https://your-app.web.app'
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type'],
+};
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
